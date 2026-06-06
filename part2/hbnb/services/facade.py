@@ -1,0 +1,2 @@
+class HBnBFacade:
+    pass
