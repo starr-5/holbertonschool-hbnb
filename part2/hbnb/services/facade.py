@@ -38,3 +38,17 @@ class HBnBFacade:
 
     def update_place(self, place_id, place):
     self.repo.update(place_id, place)
+    def create_review(self, review):
+    self.repo.add(review)
+
+    def get_review(self, review_id):
+    return self.repo.get(review_id)
+
+    def get_all_reviews(self):
+    return self.repo.get_all()
+
+    def update_review(self, review_id, review):
+    self.repo.update(review_id, review)
+
+    def delete_review(self, review_id):
+    self.repo.delete(review_id)
