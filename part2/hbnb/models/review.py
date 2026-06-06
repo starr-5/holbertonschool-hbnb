@@ -8,3 +8,5 @@ class Review(BaseModel):
         self.text = text
         self.user = user
         self.place = place
+        if not text:
+    raise ValueError("text required")

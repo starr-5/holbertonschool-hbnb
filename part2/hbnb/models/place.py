@@ -23,3 +23,11 @@ class Place(BaseModel):
 
         self.reviews = []
         self.amenities = []
+        if price < 0:
+    raise ValueError("invalid price")
+
+    if latitude < -90 or latitude > 90:
+    raise ValueError("invalid latitude")
+
+    if longitude < -180 or longitude > 180:
+    raise ValueError("invalid longitude")
