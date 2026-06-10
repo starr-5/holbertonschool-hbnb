@@ -1,12 +1,12 @@
 from flask import Flask
-from config import Config
+from flask_bcrypt import Bcrypt
 
-def create_app(config_class=Config):
+bcrypt = Bcrypt()
+
+
+def create_app():
     app = Flask(__name__)
 
-    app.config.from_object(config_class)
-
-    from app.api.v1.users import users_bp
-    app.register_blueprint(users_bp)
+    bcrypt.init_app(app)
 
     return app
